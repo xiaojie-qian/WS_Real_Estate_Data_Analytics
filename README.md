@@ -15,3 +15,7 @@ Watershed Property Management, Inc. Watershed is responsible for managing thousa
 1. the current monthly rent Watershed charges for all of their client’s 244 properties, as well as the property type and geographic location of those properties.
 2. some general information about examples of short-term rental properties. This information can be used to get a sense of what kind of nightly rental price Watershed’s client’s properties could be listed for, if they were converted to short-term rentals.
 3. records about when those short-term rental properties were rented out, so that you can calculate their occupancy rates.
+
+
+
+![image](https://user-images.githubusercontent.com/58776067/168479026-90c195ef-bdda-4c2a-b74a-a9c8cef21de4.png)
