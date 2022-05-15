@@ -1,0 +1,39 @@
+# Understanding the business to set resonable bussiness metrics 
+
+## Description of the project
+- Watershed Properties is a residential property management company. We manage several thousand properties in more than 60 different neighborhoods around the United States.
+- Watershed currently has a time-sensitive opportunity to explore the short-term rental market with one of its top property owners?
+- Watershed wants to know: 
+  (1) calculate how much it would cost to convert and maintain each of this client’s properties as a short-term rental.
+  (2) determine the nightly rental price that would maximize the profits from each of these properties, if they were converted to short-term rentals.
+  (3) calculate which properties would have increased profits as short-term rentals.
+  (4) determine how profitable, overall, it would be if Watershed converted some of this client's properties into short-term rentals. 
+  (5) need to determine how much cash Watershed would need in order to realize any potential profits from converting the properties.
+
+## Understanding the stakeholders’ needs and constraints
+1. The client owns 244 properties.
+2. The occupancy rate of those 244 properties is 97.3% (or 36/37 months) when they are managed as long-term rentals.
+3. The initial capital required to convert a long-term rental property to a short-term rental property is $30,000 (for furnishings, linens, etc.). That capital expenditure will depreciate over 5 years.
+4  $6000 in cash will be needed for each property each year after the first (conversion) year to cover items that wear out quickly. This amount is treated as an expense and is not depreciated.
+5. Utilities will be $300 a month for each property, or $3600 a year.
+6. The hospitality fee (variable cost) for each visit (for key service, cleaning, etc.) will be $100, regardless of the actual number of days of a visit. 
+7. The average short-term stay is 3 nights.
+8. All the properties have the same capital expenditure and fixed costs.
+9. 10% of the rental fee should be budgeted for potential regulatory and legal fees.
+10. 20% of the rental fee should be budgeted for the online short-term rental provider (like Airbnb).
+11. The two fees above are also combined and called the "transaction fee" in some spreadsheets and questions. The total default transaction fee is 30%. 
+12. All clients pay their rent on time.
+
+### The factors can be ignored
+1. Weekly or seasonal changes in rent or occupancy rate.
+2. Marketing strategies, like discounts or coupons.
+3. Special events during the year that might affect the rentals in one specific location.
+4. Loss in rent during the time interval when properties are being converted to short-term rental properties,
+
+## Business Metrics: 
+1. Cost to convert and maintain short-term rentals
+2. Maximized rental price 
+3. Profit 
+4. Cash flow 
+5. Occupancy Rate = Total Units Rented / Total Available Space or Units
+
