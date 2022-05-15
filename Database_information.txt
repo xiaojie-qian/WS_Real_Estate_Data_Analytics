@@ -1,0 +1,110 @@
+# Database: watershed_property_info
+
+# Tables (6 tables)
+   TABLE                   ALIAS 
+1 location                   l
+2 property_type              p
+3 st_property_info           s1
+4 st_rental_dates            s2
+5 st_rental_prices           s3
+6 watershed_property_info    w
+
+# Relation Description:
+ TABLE                       ER1             ER2             ER3
+location:                 locatin_id
+property_type:                         property_type_id
+st_property_info:         location                         st_property_id
+st_rental_dates:                                           st_property
+st_rental_prices:         location     property_type
+watershed_property_info:  location     property_type
+
+
+## Table 1: location -> PK location
+Field	        Type	   Null	   Key	Default	Extra
+location_id	varchar(255)	NO	   PRI	 None	
+city	    varchar(255)	YES		     None	
+state	    varchar(255)	YES		     None	
+zipcode	     int(5)     	YES		     None	
+
+### Data Sample 1
+location_id	   city	   state	zipcode
+L1	          Anchorage	  AK	99501
+L10	          Anchorage	  AK	99518
+L100	      Cherokee	  AL	35616
+L1000	      Azusa	      CA	91702
+L10000	      Winston-Sa  NC	27101
+
+## Table 2: property_type -> PK property_type_id
+Field	                    Type	Null	Key	 Default	Extra
+property_type_id	varchar(255)	NO	    PRI	 None	
+apt_house	        varchar(255)	YES		     None	
+num_bedrooms	    varchar(255)	YES		     None	
+kitchen	            varchar(255)	YES		     None	
+shared	            varchar(255)	YES		     None	
+
+### Data Sample 2
+property_type_id	apt_house	num_bedrooms	kitchen	shared
+R1	                apartment	       1	        Y	  Y
+R10	                house	           1	        Y	  N
+R11	                house	           1	        N	  Y
+R12	                house	           1	        N	  N
+R13	                house	           2	        Y	  Y
+
+## Table 3: st_property_info -> PK st_property_id
+Field	                Type	Null	Key	Default	Extra
+st_property_id	varchar(255)	NO	     PRI	None	
+location	    varchar(255)	YES		        None	
+property_type	varchar(255)	YES		        None	
+
+### Data Sample 3
+st_property_id	location	property_type
+ST1	               L9531	R6
+ST10	           L9533	R6
+ST100	           L1944	R2
+ST1000	           L5957	R1
+ST101	           L15257	R2
+
+## Table 4: st_rental_dates
+Field	    Type	    Null	Key	Default	Extra
+rental_date	date	      NO	PRI	None	
+st_property	varchar(255)  NO	PRI	None	
+
+### Data Sample 4
+rental_date	st_property
+2014-01-31	ST100
+2014-01-31	ST106
+2014-01-31	ST107
+2014-01-31	ST109
+2014-01-31	ST113
+
+## Table 5: st_rental_prices
+Field	                    Type	       Null	Key	Default	Extra
+location	                varchar(255)	NO	PRI	None	
+property_type	            varchar(255)	NO	PRI	None	
+percentile_10th_price	    int(11)	        YES		None	
+percentile_90th_price	    int(11)	        YES		None	
+sample_nightly_rent_price	int(11)	        YES		None	
+
+### Data Sample 5
+location	property_type	percentile_10th_price	percentile_90th_price	sample_nightly_rent_price
+L10126	        R1	                 83	                      273	                    192
+L10126         	R10	                 155	                  494	                    257
+L10126	        R11	                 82	                      411	                    242
+L10126	        R12	                 119	                  366	                    229
+L10126	        R13	                 137	                  416	                    375
+
+
+## Table 6: watershed_property_info
+Field	                Type	       Null	Key	Default	Extra
+ws_property_id	        varchar(255)	NO	PRI	None	
+location	            varchar(255)	YES		None	
+property_type	        varchar(255)	YES		None	
+current_monthly_rent	int(11)	        NO		None	
+
+### Data Sample 6
+ws_property_id	location	property_type	current_monthly_rent
+W1	             L9531	         R6	                1060
+W10	             L9533	         R6	                1200
+W100	         L1944	         R2	                3300
+W101	         L15257	         R2	                1400
+W102	         L15257	         R6	                2000
