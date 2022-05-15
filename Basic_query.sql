@@ -15,3 +15,12 @@ LEFT JOIN location l ON w.location = l.location_id
 LEFT JOIN property_type p ON w.property_type =p. property_type_id
 ORDER BY ws_property_id;
 
+-- Retrieve without date information 
+%%sql 
+SELECT DISTINCT w.ws_property_id, w.current_monthly_rent, s3.percentile_10th_price, s3.percentile_90th_price, s3.sample_nightly_rent_price, l.city, l.state, p.apt_house, p.num_bedrooms, p.kitchen, p.shared 
+FROM watershed_property_info w 
+INNER JOIN st_rental_prices s3 ON w.property_type = s3.property_type AND w.location = s3.location 
+INNER JOIN st_property_info s1 ON w.location = s1.location 
+INNER JOIN location l ON w.location = l.location_id 
+INNER JOIN property_type p ON w.property_type =p. property_type_id 
+ORDER BY ws_property_id;
