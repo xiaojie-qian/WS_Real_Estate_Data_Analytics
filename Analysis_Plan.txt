@@ -1,0 +1,7 @@
+# SMART Goal: 
+To decide if managing its properties as short-term rental will increase their overall profits.
+
+# Ask the right questions and determin the metrics 
+# Investigate the schema and clean the data (MySQL and Tabluea)
+# Variables 
+1. 
