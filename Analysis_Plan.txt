@@ -5,3 +5,7 @@ To decide if managing its properties as short-term rental will increase their ov
 # Investigate the schema and clean the data (MySQL and Tabluea)
 # Variables 
 1. 
+2. 
+
+#First best fit line 
+The first task will be to forecast what the best short-term	rents for Watershed’s 244 properties would be
