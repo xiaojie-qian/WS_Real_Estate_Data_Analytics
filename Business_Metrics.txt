@@ -37,3 +37,6 @@
 4. Cash flow 
 5. Occupancy Rate = Total Units Rented / Total Available Space or Units
 
+
+#### Notes: 
+1. Occupancy rate = Total Units Rented / Total Available Space or Units
