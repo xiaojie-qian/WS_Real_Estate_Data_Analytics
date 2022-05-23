@@ -1,13 +1,13 @@
 # Database: watershed_property_info
 
 # Tables (6 tables)
-   TABLE                   ALIAS 
-1 location                   l
-2 property_type              p
-3 st_property_info           s1
-4 st_rental_dates            s2
+   TABLE                   ALIAS    Count
+1 location                   l       72
+2 property_type              R1-R16  16
+3 st_property_info           s1      999
+4 st_rental_dates            s2               from 2014 to 2015
 5 st_rental_prices           s3
-6 watershed_property_info    w
+6 watershed_property_info    w       244      one w has multiple st 
 
 # Relation Description:
  TABLE                       ER1             ER2             ER3
@@ -44,7 +44,7 @@ shared	            varchar(255)	YES		     None
 
 ### Data Sample 2
 property_type_id	apt_house	num_bedrooms	kitchen	shared
-R1	                apartment	       1	        Y	  Y
+R1	                apartment	       1	              Y	  Y
 R10	                house	           1	        Y	  N
 R11	                house	           1	        N	  Y
 R12	                house	           1	        N	  N
@@ -88,7 +88,7 @@ sample_nightly_rent_price	int(11)	        YES		None
 ### Data Sample 5
 location	property_type	percentile_10th_price	percentile_90th_price	sample_nightly_rent_price
 L10126	        R1	                 83	                      273	                    192
-L10126         	R10	                 155	                  494	                    257
+L10126           R10	                 155	                  494	                    257
 L10126	        R11	                 82	                      411	                    242
 L10126	        R12	                 119	                  366	                    229
 L10126	        R13	                 137	                  416	                    375
@@ -104,7 +104,7 @@ current_monthly_rent	int(11)	        NO		None
 ### Data Sample 6
 ws_property_id	location	property_type	current_monthly_rent
 W1	             L9531	         R6	                1060
-W10	             L9533	         R6	                1200
-W100	         L1944	         R2	                3300
+W10	          L9533	         R6	                1200
+W100	          L1944	         R2	                3300
 W101	         L15257	         R2	                1400
 W102	         L15257	         R6	                2000
