@@ -24,3 +24,31 @@ INNER JOIN st_property_info s1 ON w.location = s1.location
 INNER JOIN location l ON w.location = l.location_id 
 INNER JOIN property_type p ON w.property_type =p. property_type_id 
 ORDER BY ws_property_id;
+
+-- calculate average occupancy rate for ws from 2015-01-01 to 2015-12-32
+/*%%sql
+SELECT DISTINCT ws_property_id w, ROUND(avg(OC),2) AS avg_rate
+FROM (SELECT DISTINCT st_property,location,(count(rental_date)/365 ) AS OC
+      FROM st_rental_dates r
+      JOIN st_property_info st
+      ON r.st_property = st.st_property_id
+      WHERE rental_date between '2015-01-01' AND '2015-12-31'
+      GROUP BY st_property,location) AS oc_tab
+JOIN watershed_property_info w
+ON w.location = oc_tab.location
+GROUP BY ws_property_id
+ORDER BY w  (wrong and need to check why !!) */
+
+-- below method is correct !! 
+%%sql
+SELECT DISTINCT ws_property_id, days/365 AS oc_rate
+FROM watershed_property_info ws,
+(SELECT DISTINCT st_property_id,location,property_type, COUNT(DISTINCT rental_date) AS days
+FROM st_property_info st, st_rental_dates r
+WHERE st.st_property_id = r.st_property
+AND YEAR(rental_date)=2015
+GROUP BY st_property_id
+ORDER BY st_property_id) AS sub
+WHERE ws.location = sub.location
+AND ws.property_type = sub.property_type 
+ORDER BY ws_property_id 
