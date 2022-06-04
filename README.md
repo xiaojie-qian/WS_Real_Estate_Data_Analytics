@@ -19,4 +19,5 @@
 
 
 
-![image](https://user-images.githubusercontent.com/58776067/168479026-90c195ef-bdda-4c2a-b74a-a9c8cef21de4.png)
+
+![Dashboard](https://user-images.githubusercontent.com/58776067/172014345-9c3085cf-c080-4b0d-9389-4ab6b3b3d987.png)(https://xiaojie-qian.github.io/WS_Real_Estate_Data_Analytics/)
