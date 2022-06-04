@@ -17,8 +17,6 @@
 2. some general information about examples of short-term rental properties. This information can be used to get a sense of what kind of nightly rental price Watershed’s client’s properties could be listed for, if they were converted to short-term rentals.
 3. records about when those short-term rental properties were rented out, so that you can calculate their occupancy rates.
 
-<br />
-<br /> 
-
 # Dashboard for analysis use 
-<img align="Middle" alt= "Dashboard" width="800px" src= "[https://user-images.githubusercontent.com/58776067/170830681-251e35c8-dc19-4022-97ff-6656fe5cdf1a.png](https://user-images.githubusercontent.com/58776067/172014345-9c3085cf-c080-4b0d-9389-4ab6b3b3d987.png)" /> {https://xiaojie-qian.github.io/WS_Real_Estate_Data_Analytics/)
+
+<img align="Middle" alt= "Dashboard" width="800px" src= "https://user-images.githubusercontent.com/58776067/172014345-9c3085cf-c080-4b0d-9389-4ab6b3b3d987.png" /> (https://xiaojie-qian.github.io/WS_Real_Estate_Data_Analytics/)
