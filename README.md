@@ -20,4 +20,4 @@
 # Dashboard for analysis use 
 
 <img align="Middle" alt= "Dashboard" width="1000px" src= "https://user-images.githubusercontent.com/58776067/172014345-9c3085cf-c080-4b0d-9389-4ab6b3b3d987.png" /> 
-_Interactive Dashboard_ :link:: https://xiaojie-qian.github.io/WS_Real_Estate_Data_Analytics/ 
+*Interactive Dashboard* :link:: https://xiaojie-qian.github.io/WS_Real_Estate_Data_Analytics/ 
